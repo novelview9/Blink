@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/topLayout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true">
+
+    <com.bit.spring.blink.Tab1.CameraSourcePreview
+      android:id="@+id/preview"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+        android:background="#4b494b">
+
+        <com.bit.spring.blink.Tab1.GraphicOverlay
+          android:id="@+id/faceOverlay"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent" />
+
+    </com.bit.spring.blink.Tab1.CameraSourcePreview>
+
+    <Button
+        android:layout_width="155dp"
+        android:layout_height="58dp"
+        android:text="Completion"
+        android:textSize="15dp"
+        android:id="@+id/completionBtn"
+        android:layout_gravity="right|bottom" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="times"
+        android:id="@+id/textView7"
+        android:layout_alignBottom="@+id/textview"
+        android:layout_toEndOf="@+id/textview"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="right|center_vertical"
+        android:layout_marginTop="80dp"
+        android:layout_marginRight="25dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="50dp"
+        android:id="@+id/textView8"
+        android:layout_marginTop="55dp"
+        android:textStyle="bold"
+        android:layout_alignTop="@+id/progressBar"
+        android:layout_alignStart="@+id/progressBar"
+        android:layout_marginStart="55dp"
+        android:layout_gravity="center_vertical|right"
+        android:layout_marginRight="65dp" />
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:id="@+id/imageView2"
+        android:src="@drawable/blink"
+        android:layout_below="@+id/imageView"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="right|center_vertical"
+        android:layout_marginBottom="100dp" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:id="@+id/imageView3"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/loading"
+        android:layout_marginTop="0dp"
+        android:layout_gravity="top|right"
+        android:layout_marginRight="30dp" />
+
+</FrameLayout>

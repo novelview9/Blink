@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ccffffff">
+
+    <com.github.mikephil.charting.charts.CombinedChart
+        android:id="@+id/chart1"
+        android:layout_width="420dp"
+        android:layout_height="280dp"
+        android:background="#00ffffff"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true" />
+    //android:layout_alignParentTop="true"
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Stop"
+        android:id="@+id/stopBtn"
+        android:textSize="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="5dp" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="ReStart"
+        android:id="@+id/reStartBtn"
+        android:textSize="20dp"
+        android:layout_marginRight="5dp"
+        android:layout_above="@+id/stopBtn"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Pause"
+        android:id="@+id/pauseBtn"
+        android:textSize="20dp"
+        android:layout_marginRight="5dp"
+        android:layout_above="@+id/stopBtn"
+        android:layout_alignStart="@+id/stopBtn" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:id="@+id/progressBar"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:indeterminate="false"
+        android:progressDrawable="@drawable/circular_progress_bar"
+        android:background="@drawable/circle_shape"
+        android:max="30000"
+        android:progress="0"
+        android:layout_above="@+id/reStartBtn"
+        android:layout_alignStart="@+id/reStartBtn"
+        android:layout_alignEnd="@+id/reStartBtn" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00"
+        android:textSize="60dp"
+        android:id="@+id/textview"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="55dp"
+        android:textStyle="bold"
+        android:layout_alignTop="@+id/progressBar"
+        android:layout_alignStart="@+id/progressBar"
+        android:layout_marginStart="55dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="times"
+        android:id="@+id/textView"
+        android:layout_alignBottom="@+id/textview"
+        android:layout_toEndOf="@+id/textview"
+        android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/timetext2"
+        android:layout_above="@+id/reStartBtn"
+        android:layout_alignEnd="@+id/progressBar"
+        android:layout_marginBottom="10dp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/textview"
+        android:id="@+id/frameLayout">
+
+        <ToggleButton
+            android:id="@+id/toggleButton2"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:background="@drawable/toggle_selector"
+            android:checked="false"
+            android:textOff="off"
+            android:textOn="on"
+            android:layout_gravity="right|top"
+            android:layout_alignParentTop="true"
+            android:layout_toStartOf="@+id/timetext2" />
+
+        <ImageButton
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:padding="0sp"
+            android:scaleType="centerCrop"
+            android:background="@android:color/transparent"
+            android:src="@drawable/alaramquestionmark"
+            android:id="@+id/alaramquestionmark"
+            android:layout_alignTop="@+id/toggleButton"
+            android:layout_alignEnd="@+id/linearLayout"
+            android:layout_gravity="left|top"
+            android:layout_marginLeft="30dp" />
+    </FrameLayout>
+
+</RelativeLayout>
